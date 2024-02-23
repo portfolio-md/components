@@ -1,23 +1,41 @@
-import { Socials } from '../Socials';
-import { FooterProps } from './types';
+import {
+  Link,
+  Card,
+  CardBody,
+  CardHeader,
+  CardFooter,
+} from '@nextui-org/react';
 
-export function Footer(props: FooterProps) {
-  const { socials, credentials } = props;
+import { Credentials, SocialItem } from '../../types/common';
+import Socials from '../Socials';
+
+type FooterProps = {
+  socials: SocialItem[];
+  credentials: Credentials;
+  LinkComponent?: React.ElementType;
+};
+
+export default function Footer(props: FooterProps) {
+  const { socials, credentials, LinkComponent } = props;
 
   return (
-    <footer className="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
-      <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          © {credentials.year}{' '}
-          <a href={credentials.url} className="hover:underline">
-            {credentials.title}
-          </a>
-          {credentials.postfix}
-        </span>
-        <div>
-          <Socials items={socials} />
+    <Card>
+      <CardHeader className="justify-between">
+        <div className="container">
+          <p className="p-8 text-start md:text-center md:text-lg md:p-4">
+            © {credentials.year}{' '}
+            <Link
+              as={LinkComponent}
+              color="foreground"
+              className="text-inherit"
+              href={credentials.url}
+            >
+              {credentials.title}
+            </Link>
+          </p>
         </div>
-      </div>
-    </footer>
+        <Socials items={socials} />
+      </CardHeader>
+    </Card>
   );
 }

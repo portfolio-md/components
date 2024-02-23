@@ -1,17 +1,11 @@
 'use client';
 
 import 'tailwindcss/tailwind.css';
+import Header from './lib/components/Header';
+import Footer from './lib/components/Footer';
+import Content from './lib/components/Content';
+import PortfolioMdProvider from './lib/components/PortfolioMdProvider';
 
-export * from './lib/components/Header';
-export * from './lib/components/Header/types';
-
-export * from './lib/components/Socials';
-export * from './lib/components/Socials/types';
-
-export * from './lib/components/Footer';
-
-export * from './lib/components/ThemeToggle';
-export * from './lib/components/Wrapper';
-export * from './lib/components/ContentWrapper';
-
+export * from '@nextui-org/react';
 export { useTheme } from 'next-themes';
+export { Header, Footer, Content, PortfolioMdProvider };

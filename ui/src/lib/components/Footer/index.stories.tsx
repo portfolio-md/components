@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Footer } from './index';
+
+import Footer from './index';
 
 const meta: Meta<typeof Footer> = {
   component: Footer,
@@ -8,6 +9,17 @@ const meta: Meta<typeof Footer> = {
 export default meta;
 type Story = StoryObj<typeof Footer>;
 
-export const Primary = {
-  args: {},
+export const Primary: Story = {
+  args: {
+    credentials: {
+      title: 'Acme',
+      year: 2024,
+      url: '.',
+    },
+    socials: [
+      {
+        url: 'https://github.com/',
+      },
+    ],
+  },
 };

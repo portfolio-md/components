@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Socials } from './index';
+
+import Socials from './index';
 
 const meta: Meta<typeof Socials> = {
   component: Socials,
@@ -8,6 +9,15 @@ const meta: Meta<typeof Socials> = {
 export default meta;
 type Story = StoryObj<typeof Socials>;
 
-export const Primary = {
-  args: {},
+export const Primary: Story = {
+  args: {
+    items: [
+      {
+        url: 'https://github.com/',
+      },
+      {
+        url: 'https://www.youtube.com/',
+      },
+    ],
+  },
 };
