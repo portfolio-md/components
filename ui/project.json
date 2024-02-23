@@ -4,5 +4,12 @@
   "sourceRoot": "ui/src",
   "projectType": "library",
   "tags": [],
-  "targets": {}
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "options": {
+        "outputPath": "dist/ui"
+      }
+    }
+  }
 }
