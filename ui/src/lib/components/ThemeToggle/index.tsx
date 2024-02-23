@@ -1,5 +1,4 @@
 import { Switch } from '@nextui-org/react';
-import React from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
 type ThemeToggleProps = {

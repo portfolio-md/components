@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Socials } from '../Socials';
 import { FooterProps } from './types';
 

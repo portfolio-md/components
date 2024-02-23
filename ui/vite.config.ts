@@ -4,7 +4,6 @@ import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import * as path from 'path';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
-import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
 export default defineConfig({
   root: __dirname,
@@ -18,7 +17,6 @@ export default defineConfig({
       tsConfigFilePath: path.join(__dirname, 'tsconfig.lib.json'),
       skipDiagnostics: true,
     }),
-    libInjectCss(),
   ],
 
   // Uncomment this if you are using workers.
@@ -45,6 +43,9 @@ export default defineConfig({
     rollupOptions: {
       // External packages that should not be bundled into your library.
       external: ['react', 'react-dom', 'react/jsx-runtime'],
+      output: {
+        banner: '"use client";',
+      },
     },
   },
 });
