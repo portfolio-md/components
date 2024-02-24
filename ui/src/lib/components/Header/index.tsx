@@ -27,9 +27,12 @@ export default function Header(props: HeaderProps) {
           <Image
             as={ImageComponent}
             src={home.logoUrl}
-            alt="Logo"
+            alt={home.title}
             radius="sm"
-            className="mr-3 h-6 sm:h-9"
+            height={36}
+            width={36}
+            removeWrapper={true}
+            className="mr-3"
           />
           <p className="font-bold text-inherit">{home.title}</p>
         </Link>
