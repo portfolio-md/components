@@ -8,7 +8,9 @@ export default function PortfolioMdProvider({
 }) {
   return (
     <NextUIProvider>
-      <ThemeProvider attribute="class">{children}</ThemeProvider>
+      <ThemeProvider attribute="class" defaultTheme="light">
+        {children}
+      </ThemeProvider>
     </NextUIProvider>
   );
 }
