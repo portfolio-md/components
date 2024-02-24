@@ -1,10 +1,4 @@
-import {
-  Link,
-  Card,
-  CardBody,
-  CardHeader,
-  CardFooter,
-} from '@nextui-org/react';
+import { Link, Card, CardHeader } from '@nextui-org/react';
 
 import { Credentials, SocialItem } from '../../types/common';
 import Socials from '../Socials';
@@ -19,7 +13,7 @@ export default function Footer(props: FooterProps) {
   const { socials, credentials, LinkComponent } = props;
 
   return (
-    <Card>
+    <Card radius="none">
       <CardHeader className="justify-between">
         <div className="container">
           <p className="p-8 text-start md:text-center md:text-lg md:p-4">
