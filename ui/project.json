@@ -18,7 +18,7 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "npm publish",
-        "cwd": "ui/dist"
+        "cwd": "ui"
       }
     }
   }

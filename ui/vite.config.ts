@@ -14,8 +14,14 @@ export default defineConfig({
     nxViteTsPaths(),
     dts({
       entryRoot: 'src',
-      tsConfigFilePath: path.join(__dirname, 'tsconfig.lib.json'),
-      skipDiagnostics: true,
+      tsconfigPath: path.join(__dirname, 'tsconfig.lib.json'),
+      rollupTypes: true,
+      bundledPackages: [
+        'next-themes',
+        '@nextui-org/card',
+        '@nextui-org/select',
+        '@nextui-org/button',
+      ],
     }),
   ],
 

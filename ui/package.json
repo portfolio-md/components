@@ -1,16 +1,16 @@
 {
   "name": "@portfolio.md/components",
-  "version": "0.0.16",
-  "main": "./index.js",
-  "types": "./index.d.ts",
+  "version": "0.0.21",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./index.mjs",
-      "require": "./index.js"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     },
     "./style.css": {
-      "import": "./style.css",
-      "require": "./style.css"
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
     }
   }
 }
