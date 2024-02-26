@@ -13,7 +13,7 @@ export default function Footer(props: FooterProps) {
   const { socials, credentials, LinkComponent } = props;
 
   return (
-    <Card radius="none">
+    <Card radius="none" as="footer" className="overflow-visible">
       <CardHeader className="justify-between">
         <div className="container">
           <p className="p-8 text-start md:text-center md:text-lg md:p-4">
