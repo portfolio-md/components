@@ -6,7 +6,7 @@ type ContentProps = {
 
 export default function Content({ children }: ContentProps) {
   return (
-    <Card shadow="none" radius="none" className="flex-grow">
+    <Card shadow="none" radius="none" className="flex-grow py-8">
       <CardBody>{children}</CardBody>
     </Card>
   );

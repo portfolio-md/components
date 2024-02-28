@@ -3,5 +3,5 @@ type WrapperProps = {
 };
 
 export default function Wrapper({ children }: WrapperProps) {
-  return <div className="flex flex-col h-screen">{children}</div>;
+  return <div className="flex flex-col min-h-screen">{children}</div>;
 }
