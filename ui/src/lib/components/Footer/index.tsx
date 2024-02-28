@@ -16,7 +16,7 @@ export default function Footer(props: FooterProps) {
     <Card radius="none" as="footer" className="overflow-visible">
       <CardHeader className="justify-between">
         <div className="container">
-          <p className="px-4 py-2 lg:px-8 text-start sm:text-center md:text-lg">
+          <p className="p-4 lg:p-8 text-start sm:text-center md:text-lg">
             © {credentials.year}{' '}
             <Link
               as={LinkComponent}
