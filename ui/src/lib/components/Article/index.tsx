@@ -4,7 +4,7 @@ type ArticleProps = {
 
 export default function Article({ children }: ArticleProps) {
   return (
-    <div className="w-full lg:w-1/2 mx-auto">
+    <div className="w-full mx-auto flex justify-center">
       <article className="prose dark:prose-invert">{children}</article>
     </div>
   );
