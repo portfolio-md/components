@@ -27,6 +27,10 @@ export const Primary: Story = {
         url: '#',
       },
     ],
+    download: {
+      title: 'Download',
+      url: 'https://dmytrobaida.github.io',
+    },
   },
   render: (args) => {
     return (

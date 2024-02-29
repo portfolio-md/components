@@ -8,7 +8,9 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
+  Button,
 } from '@nextui-org/react';
+import { FaDownload } from 'react-icons/fa';
 
 import { HomeItem, MenuItem } from '../../types/common';
 import ThemeToggle from '../ThemeToggle';
@@ -18,10 +20,14 @@ type HeaderProps = {
   menu: MenuItem[];
   LinkComponent?: React.ElementType;
   ImageComponent?: React.ElementType;
+  download?: {
+    url: string;
+    title: string;
+  };
 };
 
 export default function Header(props: HeaderProps) {
-  const { home, menu, LinkComponent, ImageComponent } = props;
+  const { home, menu, download, LinkComponent, ImageComponent } = props;
 
   return (
     <Navbar isBordered isBlurred>
@@ -55,6 +61,15 @@ export default function Header(props: HeaderProps) {
       </NavbarContent>
 
       <NavbarContent justify="end">
+        {download != null && (
+          <NavbarItem>
+            <Link as={LinkComponent} href={download.url} isExternal={true}>
+              <Button>
+                <FaDownload /> {download.title}
+              </Button>
+            </Link>
+          </NavbarItem>
+        )}
         <NavbarItem>
           <ThemeToggle />
         </NavbarItem>
