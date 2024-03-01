@@ -23,6 +23,7 @@ export default function Footer(props: FooterProps) {
               color="foreground"
               className="text-inherit"
               href={credentials.url}
+              showAnchorIcon={true}
             >
               {credentials.title}
             </Link>
