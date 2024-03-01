@@ -21,7 +21,6 @@ export default defineConfig({
         '@nextui-org/card',
         '@nextui-org/select',
         '@nextui-org/button',
-        '@nextui-org/input',
         '@nextui-org/tooltip',
       ],
     }),
