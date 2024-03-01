@@ -32,7 +32,9 @@ export default function Header(props: HeaderProps) {
   return (
     <Navbar isBordered isBlurred>
       <NavbarContent>
-        <NavbarMenuToggle aria-label="menu-toggle" className="sm:hidden" />
+        {menu.length > 0 && (
+          <NavbarMenuToggle aria-label="menu-toggle" className="sm:hidden" />
+        )}
         <NavbarBrand>
           <Link as={LinkComponent} href={home.url} color="foreground">
             <Image
