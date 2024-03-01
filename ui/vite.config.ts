@@ -22,6 +22,7 @@ export default defineConfig({
         '@nextui-org/select',
         '@nextui-org/button',
         '@nextui-org/input',
+        '@nextui-org/tooltip',
       ],
     }),
   ],

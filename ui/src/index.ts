@@ -16,3 +16,4 @@ export * from '@nextui-org/card';
 export * from '@nextui-org/select';
 export * from '@nextui-org/button';
 export * from '@nextui-org/input';
+export * from '@nextui-org/tooltip';
