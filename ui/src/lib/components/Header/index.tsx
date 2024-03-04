@@ -84,15 +84,8 @@ export default function Header(props: HeaderProps) {
                 </DropdownTrigger>
                 <DropdownMenu aria-label="Download">
                   {download.map((d, i) => (
-                    <DropdownItem key={i}>
-                      <Link
-                        color="foreground"
-                        as={LinkComponent}
-                        href={d.url}
-                        isExternal={true}
-                      >
-                        {d.title}
-                      </Link>
+                    <DropdownItem key={i} href={d.url} target="_blank">
+                      {d.title}
                     </DropdownItem>
                   ))}
                 </DropdownMenu>
