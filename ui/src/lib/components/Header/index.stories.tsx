@@ -27,10 +27,16 @@ export const Primary: Story = {
         url: '#',
       },
     ],
-    download: {
-      title: 'Download',
-      url: 'https://dmytrobaida.github.io',
-    },
+    download: [
+      {
+        title: 'Download',
+        url: 'https://dmytrobaida.github.io',
+      },
+      {
+        title: 'Download 2',
+        url: 'https://dmytrobaida.github.io',
+      },
+    ],
   },
   render: (args) => {
     return (

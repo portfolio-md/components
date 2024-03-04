@@ -9,6 +9,10 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   Button,
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
 } from '@nextui-org/react';
 import { FaDownload } from 'react-icons/fa';
 
@@ -23,7 +27,7 @@ type HeaderProps = {
   download?: {
     url: string;
     title: string;
-  };
+  }[];
 };
 
 export default function Header(props: HeaderProps) {
@@ -63,13 +67,37 @@ export default function Header(props: HeaderProps) {
       </NavbarContent>
 
       <NavbarContent justify="end">
-        {download != null && (
+        {download != null && download.length > 0 && (
           <NavbarItem>
-            <Link as={LinkComponent} href={download.url} isExternal={true}>
-              <Button>
-                <FaDownload /> {download.title}
-              </Button>
-            </Link>
+            {download.length === 1 ? (
+              <Link as={LinkComponent} href={download[0].url} isExternal={true}>
+                <Button>
+                  <FaDownload /> {download[0].title}
+                </Button>
+              </Link>
+            ) : (
+              <Dropdown>
+                <DropdownTrigger>
+                  <Button isIconOnly>
+                    <FaDownload />
+                  </Button>
+                </DropdownTrigger>
+                <DropdownMenu aria-label="Download">
+                  {download.map((d, i) => (
+                    <DropdownItem key={i}>
+                      <Link
+                        color="foreground"
+                        as={LinkComponent}
+                        href={d.url}
+                        isExternal={true}
+                      >
+                        {d.title}
+                      </Link>
+                    </DropdownItem>
+                  ))}
+                </DropdownMenu>
+              </Dropdown>
+            )}
           </NavbarItem>
         )}
         <NavbarItem>
