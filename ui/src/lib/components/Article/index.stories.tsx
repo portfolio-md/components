@@ -2,6 +2,15 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import Article from './index';
 
+const code = `module.exports = {
+  purge: [],
+  theme: {
+    extend: {},
+  },
+  variants: {},
+  plugins: [],
+}`;
+
 const meta: Meta<typeof Article> = {
   component: Article,
   title: 'Article',
@@ -24,6 +33,9 @@ export const Primary: Story = {
           But a recent study shows that the celebrated appetizer may be linked
           to a series of rabies cases springing up around the country.
         </p>
+        <pre>
+          <code>{code}</code>
+        </pre>
       </>
     ),
   },
